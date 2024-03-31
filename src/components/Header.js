@@ -26,41 +26,41 @@ console.log(cartItems);
 
 
   return (
-    <div className="flex justify-between bg-blue-400 shadow-lg">
-      <div className="logo">
-        <img className="w-40 m-4" src={LOGO_URL} alt="" />
+    <div className="flex justify-between bg-pink-100 shadow-lg">
+      <div className="w-1/12">
+        <img className="" src={LOGO_URL} alt="" />
       </div>
 
-      <div className="flex items-center">
-        <ul className="flex p-4 m-4 font-bold">
-          <li className="px-4 ">
+      <div className="flex items-center text-lg">
+        <ul className="flex p-4 m-4 font-bold text-gray-600 ">
+          <li className="px-4 hover:text-black ">
             <Link to="/">Home </Link>
           </li>
-          <li className="px-4 ">
+          <li className="px-4 hover:text-black ">
             <Link to="/about">About Us </Link>
           </li>
-          <li className="px-4 ">
+          <li className="px-4 hover:text-black ">
             <Link to="/contact">Contact Us </Link>
           </li>
-          <li className="px-4 ">
+          <li className="px-4 hover:text-black ">
             <Link to="/grocery">Grocery </Link>
           </li>
-          <li className="px-4 ">
+          <li className="px-4  hover:text-black">
             <Link to="/cart">
             Cart - ({cartItems.length} items)
             </Link> 
           </li>
 
-          <button
-            
+          {/* <button
+            className="hover:text-black"
             onClick={() => {
               btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
             }}
           >
             {btnName}
-          </button>
+          </button> */}
 
-          <li className="px-4 font-bold">{loggedInUser}</li>
+          {/* <li className="px-4 font-bold hover:text-black">{loggedInUser}</li> */}
         </ul>
       </div>
     </div>

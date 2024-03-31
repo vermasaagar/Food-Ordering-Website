@@ -2,7 +2,7 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import React from "react";
 
 import { useState, useEffect, useContext } from "react";
-import UserContext from "./utils/UserContext";
+// import UserContext from "./utils/UserContext";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
@@ -41,7 +41,7 @@ const Body = () => {
     );
   };
 
-  const { loggedInUser, setUserName } = useContext(UserContext);
+  // const { loggedInUser, setUserName } = useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
 
@@ -60,7 +60,7 @@ const Body = () => {
         <div className="search p-4 m-4">
           <input
             type="text"
-            className="border border-solid border-black px-5 py-[3px] rounded-l-lg"
+            className="border border-black px-5 py-[6px] rounded-l-lg"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -68,7 +68,7 @@ const Body = () => {
           />
 
           <button
-            className="px-4 py-1 bg-blue-300 rounded-r-lg"
+            className="px-4 py-[6px] bg-blue-300 rounded-r-lg hover:bg-blue-400 border border-black"
             onClick={() => {
               const filteredRestaurant = listOfRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -81,9 +81,9 @@ const Body = () => {
           </button>
         </div>
 
-        <div className="search p-4 m-4 flex items-center">
+        <div className="search p-4 m-4 flex items-center ">
           <button
-            className="px-4 py-1 bg-blue-300 rounded-lg"
+            className="px-4 py-[6px] bg-blue-300 rounded-lg hover:bg-blue-400"
             onClick={() => {
               const filteredList = listOfRestaurant.filter((res) => {
                 return res.info.avgRating > 4.0;
@@ -96,14 +96,14 @@ const Body = () => {
           </button>
         </div>
 
-        <div className="search p-4 m-4 flex items-center">
+        {/* <div className="search p-4 m-4 flex items-center">
           <label>User Name : </label>
           <input
             className="border border-black p-2"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}
           ></input>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-wrap border-2 border-black justify-around">
         {filteredRestaurant.map((restaurant) => (
