@@ -40,10 +40,12 @@ console.log(cartItems);
             <Link to="/about">About Us </Link>
           </li>
           <li className="px-4 hover:text-black ">
-            <Link to="/contact">Contact Us </Link>
+            <Link to="/contact">
+              
+              Help </Link>
           </li>
           <li className="px-4 hover:text-black ">
-            <Link to="/grocery">Grocery </Link>
+            <Link to="/grocery">Add-Restaurant </Link>
           </li>
           <li className="px-4  hover:text-black">
             <Link to="/cart">
@@ -51,14 +53,14 @@ console.log(cartItems);
             </Link> 
           </li>
 
-          {/* <button
+          <button
             className="hover:text-black"
             onClick={() => {
-              btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
+              btnName === "Sign In" ? setbtnName("Sign Out") : setbtnName("Sign In");
             }}
           >
             {btnName}
-          </button> */}
+          </button>
 
           {/* <li className="px-4 font-bold hover:text-black">{loggedInUser}</li> */}
         </ul>

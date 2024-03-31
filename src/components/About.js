@@ -24,8 +24,13 @@ render(){
     console.log("Parent render");
 
     return(
-            <div>
-            <h1>ABout US Page</h1>
+            <div
+            className="text-center p-20 bg-slate-400 h-screen"
+            >
+            <h1
+            className="text-lg font-semibold
+            p-4"
+            >About Us Page</h1>
           
             <UserClass name={"Sagar"} location = {"Uttar Pradesh"}/>
         </div>
