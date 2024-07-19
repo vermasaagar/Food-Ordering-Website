@@ -43,7 +43,7 @@ const RestaurantMenu = () =>{
 
      const {itemCards} = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-
+    
 
 
      const categories = 
